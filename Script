@@ -1,0 +1,23 @@
+command /teamchat [<text>]:
+    permission: team.use
+    trigger:
+        if arg 1 is "login":
+            send "&7Du bist nun eingeloggt"
+            set {teamchat::%uuid of player%} to true
+        if arg 1 is "logout":
+            send "&7Du bist nun ausgeloggt"
+            set {teamchat::%uuid of player%} to false
+
+
+command /tc [<text>]:
+    permission: team.use
+    trigger:
+        if arg 1 is set:
+            if {teamchat::%uuid of player%} is true:
+                loop all players:
+                    if {teamchat::%uuid of loop-player%} is true:
+                        send "&7Teamchat | %player%: %arg 1%" to loop-player
+            else:
+                send "&7Du bist nicht eingeloggt"
+        else:
+            send "&7Du hast keine Nachricht geschrieben."
