@@ -14,5 +14,5 @@ Dies ist ein Teamchat Script mit Login und Logout Funktion für dein Minecraft S
 
 Bei Fragen oder Bugs bin ich gerne in Issues für euch da!
 
-Mit freundlichen Grüßen
+Mit freundlichen Grüßen   
 SystemUpdate | Max
